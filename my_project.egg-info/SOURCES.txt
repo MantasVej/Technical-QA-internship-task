@@ -1,0 +1,16 @@
+setup.py
+Pages/__init__.py
+Tests/__init__.py
+my_project.egg-info/PKG-INFO
+my_project.egg-info/SOURCES.txt
+my_project.egg-info/dependency_links.txt
+my_project.egg-info/top_level.txt
+pages/__init__.py
+pages/base_page.py
+pages/home_page.py
+tests/__init__.py
+tests/base_test.py
+tests/test_scenario1.py
+tests/test_scenario2.py
+utils/__init__.py
+utils/locator.py
