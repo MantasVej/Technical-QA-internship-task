@@ -10,6 +10,12 @@ class BasePage(object):
     def find_element(self, locator):
         return self.driver.find_element(*locator)
     
+    def find_elements(self, locator):
+        return self.driver.find_elements(*locator)
+    
+    def get_title(self):
+        return self.driver.title
+    
     def hover(self, locator):
         element = self.find_element(locator)
         hover = ActionChains(self.driver).move_to_element(element)

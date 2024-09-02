@@ -4,13 +4,15 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 class BaseTest(unittest.TestCase):
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
         options = Options()
         options.add_argument("--disable-search-engine-choice-screen")
-        self.driver = webdriver.Chrome(options=options)
-        self.driver.get("https://magento.softwaretestingboard.com")
+        cls.driver = webdriver.Chrome(options=options)
+        cls.driver.get("https://magento.softwaretestingboard.com")
 
-    def tearDown(self):
+    @classmethod
+    def tearDownClass(self):
         time.sleep(2)
         self.driver.quit()
 
